@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
+    "build": "webpack client.js",
+    "start": "node index.js",
+    "test": "npm run cypress:run",
+    "ci": "start-server-and-test http://localhost:1337/index.html",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
     "cypress:verify": "cypress verify",
@@ -15,7 +19,11 @@
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "license": "ISC",
   "devDependencies": {
-    "ok-file": "1.5.2"
+    "cypress": "^4.12.1",
+    "ok-file": "1.5.2",
+    "start-server-and-test": "^1.11.3",
+    "webpack": "^5.0.0-beta.26",
+    "webpack-cli": "^3.3.12"
   },
   "repository": {
     "type": "git",
